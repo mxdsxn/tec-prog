@@ -5,27 +5,27 @@ Box::~Box() {}
 
 void Box::setWidth(float width)
 {
- width = width;
+ this->width = width;
 }
 
 void Box::setHeight(float height)
 {
- height = height;
+ this->height = height;
 }
 
 void Box::setDepth(float depth)
 {
- depth = depth;
+ this->depth = depth;
 }
 
 float Box::getWidth()
 {
- return width;
+ return this->width;
 }
 
 float Box::getHeight()
 {
- return height;
+ return this->height;
 }
 
 float Box::getDepth()

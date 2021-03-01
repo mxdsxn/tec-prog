@@ -9,7 +9,8 @@ BoxTest::BoxTest()
  box1 = nullptr;
  box2 = nullptr;
 }
-BoxTest::~BoxTest() {}
+
+BoxTest ::~BoxTest() {}
 
 void BoxTest::startTest()
 {
@@ -42,12 +43,12 @@ void BoxTest::startTest()
  box2 = newBox2;
 
  cout << "\nArea:\n";
- cout << "Box 1: " << box1->area();
- cout << "Box 2: " << box2->area();
+ cout << "Box 1: " << box1->area() << endl;
+ cout << "Box 2: " << box2->area() << endl;
  cout << "\n";
 
  cout << "\nVolume:\n";
- cout << "Box 1: " << box1->volume();
- cout << "Box 2: " << box2->volume();
+ cout << "Box 1: " << box1->volume() << endl;
+ cout << "Box 2: " << box2->volume() << endl;
  cout << "\n";
 }

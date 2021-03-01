@@ -6,54 +6,22 @@ private:
  float width, height, depth;
 
 public:
- Box() {}
- ~Box() {}
+ Box();
+ ~Box();
 
- void setWidth(float width)
- {
-  this->width = width;
- }
+ void setWidth(float width);
 
- void setHeight(float height)
- {
-  this->height = height;
- }
+ void setHeight(float height);
 
- void setDepth(float depth)
- {
-  this->depth = depth;
- }
+ void setDepth(float depth);
 
- float getWidth()
- {
-  return this->width;
- }
+ float getWidth();
 
- float getHeight()
- {
-  return this->height;
- }
+ float getHeight();
 
- float getDepth()
- {
-  return depth;
- }
+ float getDepth();
 
- float volume()
- {
-  float valume = width * height * depth;
+ float volume();
 
-  return valume;
- }
-
- float area()
- {
-  float areaWH = 2 * (width * height);
-  float areaHD = 2 * (height * depth);
-  float areaDW = 2 * (depth * width);
-
-  float area = areaWH + areaHD + areaDW;
-
-  return area;
- }
+ float area();
 };
