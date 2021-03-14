@@ -14,5 +14,5 @@ public:
  void operator=(char *newInfo);
  void operator=(String newInfo);
  char *operator+(String rightLeft);
- void abreviar();
+ char *abreviar();
 };

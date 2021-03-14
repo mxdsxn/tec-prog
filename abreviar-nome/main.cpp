@@ -10,7 +10,7 @@ int main()
 
  String name = nameString;
 
- name.abreviar();
+ cout << name.abreviar() << endl;
 
  return 0;
 }

@@ -40,9 +40,10 @@ char *String::operator+(String rightLeft)
  return result;
 }
 
-void String::abreviar()
+char *String::abreviar()
 {
  char *result = (char *)(malloc(sizeof(char) * strlen(this->info)));
+ // char result[strlen(this->info)];
 
  int firstLetterWord = 0;
  bool firstLetterSetted = false;
@@ -63,15 +64,23 @@ void String::abreviar()
 
    if (i - firstLetterWord <= 2)
    {
-    char word[2];
+    char word[3] = "";
     word[0] = (this->info[firstLetterWord]);
     word[1] = (this->info[firstLetterWord + 1]);
-    cout << word << " ";
+    word[2] = *" ";
+
+    strcat(result, word);
    }
    else
    {
-    cout << this->info[firstLetterWord] << ". ";
+    char letter[3] = "";
+    letter[0] = (this->info[firstLetterWord]);
+    letter[1] = *(".");
+    letter[2] = *(" ");
+
+    strcat(result, letter);
    }
   }
  }
+ return result;
 }
