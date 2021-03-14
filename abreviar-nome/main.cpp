@@ -6,6 +6,8 @@ using namespace std;
 int main()
 {
  char nameString[100] = "";
+
+ cout << "Escrava seu nome completo:" << endl;
  cin.get(nameString, 100);
 
  String name = nameString;
