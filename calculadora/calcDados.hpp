@@ -1,6 +1,10 @@
+#pragma once
+
 #include "./calcControle.hpp"
 #include "./calcInterface.hpp"
 
+class CalcInterface;
+class CalcControle;
 class CalcDados
 {
 private:

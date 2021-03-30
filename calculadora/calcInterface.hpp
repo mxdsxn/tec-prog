@@ -1,6 +1,10 @@
+#pragma once
+
 #include "./calcControle.hpp"
 #include "./calcDados.hpp"
 
+class CalcDados;
+class CalcControle;
 class CalcInterface
 {
 public:
@@ -11,6 +15,6 @@ public:
  ~CalcInterface();
 
  double recebeOperando(int i);
- char recebeOperador(char op);
+ char recebeOperador();
  void mostraResultado(double resultado);
 };

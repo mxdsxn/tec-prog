@@ -9,24 +9,24 @@ CalcDados::~CalcDados()
  delete this->processador;
 }
 
-void setOperando(int i, double valor)
+void CalcDados::setOperando(int i, double valor)
 {
  if (this)
  {
-  this->operando[i] = valor;
+  this->operandos[i] = valor;
  }
 }
 
-double getOperando(int i)
+double CalcDados::getOperando(int i)
 {
  if (this)
  {
-  return this->operando[i];
+  return this->operandos[i];
  }
  return 0;
 }
 
-void setOperacao(char op)
+void CalcDados::setOperacao(char op)
 {
  if (this)
  {
@@ -34,11 +34,13 @@ void setOperacao(char op)
  }
 }
 
-char getOperacao()
+char CalcDados::getOperacao()
 {
+ char resultado = (char)0;
  if (this)
  {
-  return this->operacao;
+  resultado = this->operacao;
  }
- return "";
+
+ return resultado;
 }

@@ -26,14 +26,14 @@ double CalcInterface::recebeOperando(int i)
 
 char CalcInterface::recebeOperador()
 {
- char op = "";
+ char op = 0;
  if (this->memoria)
  {
   do
   {
    cout << "Selecione um operador (* - + /): ";
    cin >> op;
-  } while (op != "+" && op != "*" && op != "-" && op != "/" && op != "s");
+  } while (op != '+' && op != '*' && op != '-' && op != '/' && op != 's');
 
   this->memoria->setOperacao(op);
  }

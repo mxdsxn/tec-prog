@@ -6,14 +6,14 @@ Calculadora::Calculadora()
  this->memoria = new CalcDados();
  this->processador = new CalcControle();
 
- // this->entradaSaida->memoria = this->memoria;
- // this->entradaSaida->processador = this->processador;
+ this->entradaSaida->memoria = this->memoria;
+ this->entradaSaida->processador = this->processador;
 
- // this->memoria->entradaSaida = this->entradaSaida;
- // this->memoria->processador = this->processador;
+ this->memoria->entradaSaida = this->entradaSaida;
+ this->memoria->processador = this->processador;
 
- // this->processador->memoria = this->memoria;
- // this->processador->entradaSaida = this->entradaSaida;
+ this->processador->memoria = this->memoria;
+ this->processador->entradaSaida = this->entradaSaida;
 }
 
 Calculadora::~Calculadora()
@@ -21,4 +21,9 @@ Calculadora::~Calculadora()
  delete this->entradaSaida;
  delete this->memoria;
  delete this->processador;
+}
+
+void Calculadora::iniciar()
+{
+ this->processador->executar();
 }
