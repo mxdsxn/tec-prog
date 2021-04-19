@@ -2,7 +2,7 @@
 #include <string>
 #include "./empregado.hpp"
 
-class Faxineiro:: public Empregado
+class Faxineiro : public Empregado
 {
 public:
     Faxineiro(string nome, string cpf);
@@ -10,4 +10,4 @@ public:
 
     void mostraDados();
     float calculaSalario(float horasTrabalhadas);
-}
+};

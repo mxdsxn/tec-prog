@@ -3,12 +3,13 @@
 
 using namespace std;
 
-class Empregado 
+class Empregado
 {
 protected:
     string nome;
     string cpf;
     string cargo;
+
 public:
     Empregado(string nome, string cpf, string cargo);
     ~Empregado();

@@ -11,19 +11,22 @@ int main()
     int bonus;
     float horasTrabalhas;
 
-    cout << "1 - Gerente" << end;
-    cout << "2 - Faxineiro" << end;
+    cout << "1 - Gerente" << endl;
+    cout << "2 - Faxineiro" << endl;
+    cin >> menuOp;
 
-    if(menuOp == 1)
+    switch (menuOp)
+    {
+    case 1:
     {
         cout << "Insira nome: " << endl;
-        getline(cin, nome);
-        
+        cin >> nome;
+
         cout << endl;
 
         cout << "Insira cpf: " << endl;
-        getline(cin, cpf);
-        
+        cin >> cpf;
+
         cout << endl;
 
         cout << "Insira bonus: " << endl;
@@ -35,26 +38,31 @@ int main()
         cin >> horasTrabalhas;
 
         gerente->mostraDados();
-        cout << "Salario: "<< gerente->calculaSalario(horasTrabalhas)
+        cout << "Salario: " << gerente->calculaSalario(horasTrabalhas)
              << endl;
-    } else if( menuOp == 20)
+    }
+    break;
+
+    case 2:
     {
         cout << "Insira nome: " << endl;
-        getline(cin, nome);
-        
+        cin >> nome;
+
         cout << endl;
 
         cout << "Insira cpf: " << endl;
-        getline(cin, cpf);
-        
-        Gerente *faxineiro = new Faxineiro(nome, cpf);
+        cin >> cpf;
+
+        Faxineiro *faxineiro = new Faxineiro(nome, cpf);
 
         cout << "Insira horas trabalhas: " << endl;
         cin >> horasTrabalhas;
 
         faxineiro->mostraDados();
-        cout << "Salario: "<< faxineiro->calculaSalario(horasTrabalhas)
+        cout << "Salario: " << faxineiro->calculaSalario(horasTrabalhas)
              << endl;
+    }
+    break;
     }
 
     return 0;
